@@ -1,0 +1,658 @@
+﻿@model MvcKutuphane.Models.Entity.TBLUYELER
+
+@{
+
+    ViewBag.Title = "Index";
+
+    Layout = "~/Views/Shared/_LayoutPanelim.cshtml";
+
+}
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>AdminLTE 3 | User Profile</title>
+
+    <!-- Tell the browser to be responsive to screen width -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+
+    <!-- Ionicons -->
+
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!-- Theme style -->
+
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
+    <!-- Google Font: Source Sans Pro -->
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+
+    <!-- Navbar -->
+    <!-- Content Wrapper. Contains page content -->
+    <!-- Content Header (Page header) -->
+
+    <section class="content-header">
+
+        <div class="container-fluid">
+
+            <div class="row mb-2">
+
+                <div class="col-sm-6">
+
+                    <h1>Profil</h1>
+
+                </div>
+
+                <div class="col-sm-6">
+
+                    <ol class="breadcrumb float-sm-right">
+
+                        <li class="breadcrumb-item"><a href="#">Anasayfa</a></li>
+
+                        <li class="breadcrumb-item active">Kullanıcı Profili</li>
+
+                    </ol>
+
+                </div>
+
+            </div>
+
+        </div><!-- /.container-fluid -->
+
+    </section>
+
+
+
+    <!-- Main content -->
+
+    <section class="content">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-md-3">
+
+
+
+                    <!-- Profile Image -->
+
+                    <div class="card card-primary card-outline">
+
+                        <div class="card-body box-profile">
+
+                            <div class="text-center">
+
+                                <img class="profile-user-img img-fluid img-circle"
+                                     src="~/web2/images/uncle.jpg"
+                                     alt="Kullanıcı profil resmi">
+
+                            </div>
+
+
+
+                            <h3 class="profile-username text-center">Rasim  Alperen Demirci</h3>
+
+
+
+                            <p class="text-muted text-center">Software Engineer</p>
+
+
+
+                            <ul class="list-group list-group-unbordered mb-3">
+
+                                <li class="list-group-item">
+
+                                    <b>Takipçi</b> <a class="float-right">1,322</a>
+
+                                </li>
+
+                                <li class="list-group-item">
+
+                                    <b>Takip</b> <a class="float-right">543</a>
+
+                                </li>
+
+                                <li class="list-group-item">
+
+                                    <b>Arkdaşlar</b> <a class="float-right">13,287</a>
+
+                                </li>
+
+                            </ul>
+
+
+
+                            <a href="#" class="btn btn-primary btn-block"><b>Takip Et</b></a>
+
+                        </div>
+
+                        <!-- /.card-body -->
+
+                    </div>
+
+                    <!-- /.card -->
+                    <!-- About Me Box -->
+
+                    <div class="card card-primary">
+
+                        <div class="card-header">
+
+                            <h3 class="card-title">Hakkımızda</h3>
+
+                        </div>
+
+                        <!-- /.card-header -->
+
+                        <div class="card-body">
+
+                            <strong><i class="fas fa-book mr-1"></i> Eğitim</strong>
+
+
+
+                            <p class="text-muted">
+
+                                B.S. in Computer Science from the Middle East Technical University
+
+                            </p>
+
+
+
+                            <hr>
+
+
+
+                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Konum</strong>
+
+
+
+                            <p class="text-muted">Çankaya, Ankara</p>
+
+
+
+                            <hr>
+
+
+
+                            <strong><i class="fas fa-pencil-alt mr-1"></i> Yetenekler</strong>
+
+
+
+                            <p class="text-muted">
+
+                                <span class="tag tag-danger">UI Design</span>
+
+                                <span class="tag tag-success">C#</span>
+
+                                <span class="tag tag-info">Javascript</span>
+
+                                <span class="tag tag-warning">Python</span>
+
+                                <span class="tag tag-primary">Machine Learning</span>
+
+                            </p>
+
+
+
+                            <hr>
+
+
+
+                            <strong><i class="far fa-file-alt mr-1"></i> Notlar</strong>
+
+
+
+                            <p class="text-muted">Bu proje Mvc5 yöntemleri ile yapılmış 3 panelli Kütüphane Sistemi Projesidir.</p>
+
+                        </div>
+
+                        <!-- /.card-body -->
+
+                    </div>
+
+                    <!-- /.card -->
+
+                </div>
+
+                <!-- /.col -->
+
+                <div class="col-md-9">
+
+                    <div class="card">
+
+                        <div class="card-header p-2">
+
+                            <ul class="nav nav-pills">
+
+                                <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Etkileşimler</a></li>
+
+
+
+                                <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Düzenlemeler</a></li>
+
+                            </ul>
+
+                        </div><!-- /.card-header -->
+
+                        <div class="card-body">
+
+                            <div class="tab-content">
+
+                                <div class="active tab-pane" id="activity">
+
+                                    <!-- Post -->
+
+                                    <div class="post">
+
+                                        <div class="user-block">
+
+                                            <img class="img-circle img-bordered-sm" src="~/web2/images/olya.jpg" alt="~/web2/images/olya.jpg">
+
+                                            <span class="username">
+
+                                                <a href="#">Olya Abramovich</a>
+
+                                                <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
+
+                                            </span>
+
+                                            <span class="description">Shared publicly - 3 gün önce</span>
+
+                                        </div>
+
+                                        <!-- /.user-block -->
+
+                                        <p>
+
+                                            Kütüphanenizi gerçekten çok beğendim. Çok zengin bir kütüphane özellikle
+                                            arşivdeki kaynaklarınız çok eski eserleri de barındırıyor. Birçok kategoride
+                                            aradığımız bütün kitapları bulmak beni çok mutlu etti. Başarılı bir kütüphane
+                                            projesi olmuş başarılarınızın devamını dilerim. Sevgilerimle Rasim ben Olya
+                                            Abramovich.
+
+                                        </p>
+
+
+
+                                        <p>
+
+                                            <a href="#" class="link-black text-sm mr-2"><i class="fas fa-share mr-1"></i> Paylaş</a>
+
+                                            <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Beğen</a>
+
+                                            <span class="float-right">
+
+                                                <a href="#" class="link-black text-sm">
+
+                                                    <i class="far fa-comments mr-1"></i> Yorum (5)
+
+                                                </a>
+
+                                            </span>
+
+                                        </p>
+
+
+
+                                        <input class="form-control form-control-sm" type="text" placeholder="Yorum Yazın">
+
+                                    </div>
+
+                                    <!-- /.post -->
+                                    <!-- Post -->
+
+                                    <div class="post clearfix">
+
+                                        <div class="user-block">
+
+                                            <img class="img-circle img-bordered-sm" src="~/web2/images/uncle.jpg" alt="Kullanıcı Resmi">
+
+                                            <span class="username">
+
+                                                <a href="#">Rasim Alperen Demirci</a>
+
+                                                <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
+
+                                            </span>
+
+                                            <span class="description">Sana mesaj gönderdi - 2 gün önce</span>
+
+                                        </div>
+
+                                        <!-- /.user-block -->
+
+                                        <p>
+
+                                            Kütüphanemiz kitap, kaynak ve eser konusunda oldukça çeşitli ve zengindir.Okurların
+                                            kütüphanemizde geçirecekleri zamandan keyif alacaklarını umuyorum. Kütüphanemizde
+                                            okurlarımızın birçok yeni bilgiler öğrenip birçok keyifli zamanlar geçirmelerini
+                                            diliyorum Saygı ve sevgilerimle iyi günler dilerim.
+
+                                        </p>
+
+
+
+                                        <form class="form-horizontal">
+
+                                            <div class="input-group input-group-sm mb-0">
+
+                                                <input class="form-control form-control-sm" placeholder="Cevap">
+
+                                                <div class="input-group-append">
+
+                                                    <button type="submit" class="btn btn-danger">Gönder</button>
+
+                                                </div>
+
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+
+                                    <!-- /.post -->
+                                    <!-- Post -->
+
+                                    <div class="post">
+
+                                        <div class="user-block">
+
+                                            <img class="img-circle img-bordered-sm" src="~/web2/images/ZKHo8iJPDacj4z8R.jpg" alt="Kullanıcı Resmi">
+
+                                            <span class="username">
+
+                                                <a href="#">Polat Alemdar</a>
+
+                                                <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
+
+                                            </span>
+
+                                            <span class="description">5 fotoğraf gönderildi - 1 gün önce</span>
+
+                                        </div>
+
+                                        <!-- /.user-block -->
+
+                                        <div class="row mb-3">
+
+                                            <div class="col-sm-6">
+
+                                                <img class="img-fluid" src="~/web2/images/sicilyalı.jpg" alt="Resim">
+
+                                            </div>
+
+                                            <!-- /.col -->
+
+                                            <div class="col-sm-6">
+
+                                                <div class="row">
+
+                                                    <div class="col-sm-6">
+
+                                                        <img class="img-fluid mb-3" src="~/web2/images/bay pipo.jpg" alt="resim">
+
+                                                        <img class="img-fluid" src="~/web2/images/teşkilatın iki silahşörü.JPG" alt="resim">
+
+                                                    </div>
+
+                                                    <!-- /.col -->
+
+                                                    <div class="col-sm-6">
+
+                                                        <img class="img-fluid mb-3" src="~/web2/images/godfather.jpg" alt="resim">
+
+                                                        <img class="img-fluid" src="~/web2/images/suskunlukyasasi.jpg" alt="resim">
+
+                                                    </div>
+
+                                                    <!-- /.col -->
+
+                                                </div>
+
+                                                <!-- /.row -->
+
+                                            </div>
+
+                                            <!-- /.col -->
+
+                                        </div>
+
+                                        <!-- /.row -->
+
+
+
+                                        <p>
+
+                                            <a href="#" class="link-black text-sm mr-2"><i class="fas fa-share mr-1"></i> Paylaş</a>
+
+                                            <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Beğen</a>
+
+                                            <span class="float-right">
+
+                                                <a href="#" class="link-black text-sm">
+
+                                                    <i class="far fa-comments mr-1"></i> Yorum (5)
+
+                                                </a>
+
+                                            </span>
+
+                                        </p>
+
+
+
+                                        <input class="form-control form-control-sm" type="text" placeholder="Yorum Yazın">
+
+                                    </div>
+
+                                    <!-- /.post -->
+
+                                </div>
+
+
+
+                                <div class="tab-pane" id="settings">
+
+                                    @using (Html.BeginForm("Index2", "Panelim", FormMethod.Post))
+
+                                    {
+
+                                        <form class="form-horizontal">
+
+                                            <div class="form-group row">
+
+                                                <label for="inputName" class="col-sm-2 col-form-label">Ad</label>
+
+                                                <div class="col-sm-10">
+
+                                                    @Html.TextBoxFor(x => x.AD, new { @class = "form-control" })
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group row">
+
+                                                <label for="inputName" class="col-sm-2 col-form-label">Soyad</label>
+
+                                                <div class="col-sm-10">
+
+                                                    @Html.TextBoxFor(x => x.SOYAD, new { @class = "form-control" })
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group row">
+
+                                                <label for="inputName" class="col-sm-2 col-form-label">Kullanıcı Adı</label>
+
+                                                <div class="col-sm-10">
+
+                                                    @Html.TextBoxFor(x => x.KULLANICIADI, new { @class = "form-control" })
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group row">
+
+                                                <label for="inputName" class="col-sm-2 col-form-label">Şifre</label>
+
+                                                <div class="col-sm-10">
+
+                                                    @Html.TextBoxFor(x => x.SIFRE, new { @class = "form-control" })
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group row">
+
+                                                <label for="inputName" class="col-sm-2 col-form-label">Fotoğraf</label>
+
+                                                <div class="col-sm-10">
+
+                                                    @Html.TextBoxFor(x => x.FOTOGRAF, new { @class = "form-control" })
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group row">
+
+                                                <label for="inputName" class="col-sm-2 col-form-label">Okul</label>
+
+                                                <div class="col-sm-10">
+
+                                                    @Html.TextBoxFor(x => x.OKUL, new { @class = "form-control" })
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group row">
+
+                                                <div class="offset-sm-2 col-sm-10">
+
+                                                    <div class="checkbox">
+
+                                                        <label>
+
+                                                            <input type="checkbox"> Şartları okudum <a href="#">kabul ediyorum</a>
+
+                                                        </label>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group row">
+
+                                                <div class="offset-sm-2 col-sm-10">
+
+                                                    <button type="submit" class="btn btn-danger">Güncelle</button>
+
+                                                </div>
+
+                                            </div>
+
+                                        </form>
+
+                                    }
+
+                                </div>
+
+                                <!-- /.tab-pane -->
+
+                            </div>
+
+                            <!-- /.tab-content -->
+
+                        </div><!-- /.card-body -->
+
+                    </div>
+
+                    <!-- /.nav-tabs-custom -->
+
+                </div>
+
+                <!-- /.col -->
+
+            </div>
+
+            <!-- /.row -->
+
+        </div><!-- /.container-fluid -->
+
+    </section>
+
+    <!-- /.content -->
+    <!-- /.content-wrapper -->
+
+    <footer class="main-footer">
+
+        <div class="float-right d-none d-sm-block">
+
+            <b>Verisyon</b> 3.0.4
+
+        </div>
+
+        <strong>Copyright &copy; 2023 <a href="http://adminlte.io">MVCKütüphane</a>.</strong> Tüm Hakları Saklıdır.
+
+    </footer>
+
+
+
+    <!-- Control Sidebar -->
+
+    <aside class="control-sidebar control-sidebar-dark">
+
+        <!-- Control sidebar content goes here -->
+
+    </aside>
+
+    <!-- /.control-sidebar -->
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap 4 -->
+
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AdminLTE App -->
+
+    <script src="../../dist/js/adminlte.min.js"></script>
+
+    <!-- AdminLTE for demo purposes -->
+
+    <script src="../../dist/js/demo.js"></script>
+
+</body>
+
+</html>
